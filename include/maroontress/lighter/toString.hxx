@@ -1,8 +1,12 @@
 #ifndef com_maroontress_lighter_toString_HXX
 #define com_maroontress_lighter_toString_HXX
 
-#if __has_include(<format>)
+//  Clang has been able to include <format> header file for a long time, but
+//  std::format has been unavailable. For the time being, we will give up
+//  using std::format with Clang.
+#if __has_include(<format>) && !defined(__clang__)
 #include <format>
+#include <string>
 
 namespace maroontress::lighter {
     template <typename U>
