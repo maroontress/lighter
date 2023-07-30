@@ -2,6 +2,7 @@
 #define com_maroontress_lighter_toString_fallback_HXX
 
 #include <sstream>
+#include <string>
 
 namespace maroontress::lighter {
     template <typename U>
